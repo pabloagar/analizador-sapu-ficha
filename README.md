@@ -13,6 +13,16 @@ Ejemplo ficticio de una guardia entre el martes 31 de marzo y el miércoles 1 de
 
 La persona que revisa el mes puede comprobar los tramos antes de descargar el detalle en CSV. La herramienta acumula los minutos por mes y tarifa antes de calcular las horas completas. También permite generar planillas e informes Word según el flujo seleccionado.
 
+## El mismo turno en dos capturas
+
+**Al seleccionar marzo**, el analizador conserva el turno original de 21:00 a 03:00 y cuenta los 180 minutos entre las 21:00 y medianoche.
+
+![Cálculo de marzo con el turno original y el tramo de 21:00 a 24:00, equivalente a tres horas](capturas/marzo.png)
+
+**Al seleccionar abril**, el mismo archivo ficticio aporta los 180 minutos restantes, de medianoche a las 03:00 del 1 de abril.
+
+![Cálculo de abril con el tramo de 00:00 a 03:00 y tres horas asignadas al segundo mes](capturas/abril.png)
+
 ## Qué se probó
 
 La validación técnica de la versión 18, documentada el 1 de noviembre de 2026, cubrió 17 casos del motor de horas, incluidos cambios de mes, feriados, turnos duplicados y solapamientos. Con reportes sintéticos también se comprobó en Edge la lectura de PDF y la generación de archivos sin conexión. Queda pendiente contrastar un período autorizado con los totales que utiliza la institución.
